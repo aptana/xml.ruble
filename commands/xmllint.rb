@@ -1,5 +1,5 @@
 require 'radrails'
-# FIXME This won't work as is, I assume
+# FIXME This won't work on windows
 command 'Validate Syntax' do |cmd|
   cmd.key_binding = 'CONTROL+M2+V'
   cmd.scope = 'text.xml'
