@@ -1,4 +1,4 @@
-require 'radrails'
+require 'ruble'
 require 'rexml/document'
 
 def serialize(source, dest)

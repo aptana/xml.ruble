@@ -1,5 +1,5 @@
 require 'java'
-require 'radrails'
+require 'ruble'
 
 bundle 'XML' do |bundle|
   bundle.author = 'Allan Odgaard'
@@ -7,7 +7,7 @@ bundle 'XML' do |bundle|
   bundle.description =  <<END
 Support for the <a href="http://www.w3.org/XML/">eXtensible Markup Language</a>.
 END
-  bundle.repository = "git://github.com/aptana/xml-rbundle.git"
+  bundle.repository = "git://github.com/aptana/xml-ruble.git"
   
   bundle.menu 'XML' do |main_menu|
     main_menu.command 'Validate Syntax'
@@ -20,8 +20,8 @@ END
   end
 end
 
-# Extend RadRails::Editor to add special ENV vars
-module RadRails
+# Extend Ruble::Editor to add special ENV vars
+module Ruble
   class Editor
     alias :to_env_pre_xml_bundle :to_env
     def to_env

@@ -1,4 +1,4 @@
-require 'radrails'
+require 'ruble'
 # FIXME This won't work on windows
 command 'Validate Syntax' do |cmd|
   cmd.key_binding = 'CONTROL+M2+V'

@@ -1,4 +1,4 @@
-require 'radrails'
+require 'ruble'
 
 command 'Tidy' do |cmd|
   cmd.key_binding = 'CONTROL+M2+H'
