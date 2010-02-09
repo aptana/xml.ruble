@@ -7,7 +7,7 @@ bundle 'XML' do |bundle|
   bundle.description =  <<END
 Support for the <a href="http://www.w3.org/XML/">eXtensible Markup Language</a>.
 END
-  bundle.repository = "git://github.com/aptana/xml-ruble.git"
+  bundle.repository = "git://github.com/aptana/xml.ruble.git"
   
   bundle.menu 'XML' do |main_menu|
     main_menu.command 'Validate Syntax'
