@@ -19,8 +19,8 @@ END
   folding_stop_marker = /^\s*(<\/[^>]+>|[\/%]>|-->)\s*$/
   bundle.folding["text.xml"] = folding_start_marker, folding_stop_marker
   # XSL Folding
-  start_folding = /^\s*(<[^!?%/](?!.+?(/>|</.+?>))|<[!%]--(?!.+?--%?>)|<%[!]?(?!.+?%>))/
-  end_folding = /^\s*(</[^>]+>|[/%]>|-->)\s*$/
+  start_folding = /^\s*(<[^!?%\/](?!.+?(\/>|<\/.+?>))|<[!%]--(?!.+?--%?>)|<%[!]?(?!.+?%>))/
+  end_folding = /^\s*(<\/[^>]+>|[\/%]>|-->)\s*$/
   bundle.folding['text.xml.xsl'] = start_folding, end_folding
   
   # File types
