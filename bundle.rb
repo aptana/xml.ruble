@@ -8,14 +8,32 @@ bundle 'XML' do |bundle|
 Support for the <a href="http://www.w3.org/XML/">eXtensible Markup Language</a>.
 END
   bundle.repository = "git://github.com/aptana/xml.ruble.git"
-  # Folding
-  folding_start_marker = /^\s*(<[^!?%\/](?!.+?(\/>|<\/.+?>))|<[!%]--(?!.+?--%?>)|<%[!]?(?!.+?%>))/
-  folding_stop_marker = /^\s*(<\/[^>]+>|[\/%]>|-->)\s*$/
-  bundle.folding["text.xml"] = folding_start_marker, folding_stop_marker
+
   # Indentation
   increase_indent_pattern = /^\s*<(([^!\/?]|%)(?!.+?([\/%]>|<\/.+?>))|[%!]--\s*$)/
   decrease_indent_pattern = /^\s*(<\/[^>]+>|-->|--%>)/
   bundle.indent["text.xml"] = increase_indent_pattern, decrease_indent_pattern
+  
+  # XML Folding
+  folding_start_marker = /^\s*(<[^!?%\/](?!.+?(\/>|<\/.+?>))|<[!%]--(?!.+?--%?>)|<%[!]?(?!.+?%>))/
+  folding_stop_marker = /^\s*(<\/[^>]+>|[\/%]>|-->)\s*$/
+  bundle.folding["text.xml"] = folding_start_marker, folding_stop_marker
+  # XSL Folding
+  start_folding = /^\s*(<[^!?%/](?!.+?(/>|</.+?>))|<[!%]--(?!.+?--%?>)|<%[!]?(?!.+?%>))/
+  end_folding = /^\s*(</[^>]+>|[/%]>|-->)\s*$/
+  bundle.folding['text.xml.xsl'] = start_folding, end_folding
+  
+  # File types
+  bundle.register_file_type('*.xml', 'text.xml')
+  bundle.register_file_type('*.tld', 'text.xml')
+  bundle.register_file_type('*.jsp', 'text.xml')
+  bundle.register_file_type('*.pt', 'text.xml')
+  bundle.register_file_type('*.cpt', 'text.xml')
+  bundle.register_file_type('*.dtml', 'text.xml')
+  bundle.register_file_type('*.rss', 'text.xml')
+  bundle.register_file_type('*.opml', 'text.xml')
+  bundle.register_file_type('*.xsl', 'text.xml.xsl')
+  bundle.register_file_type('*.xslt', 'text.xml.xsl')
   
   bundle.menu 'XML' do |main_menu|
     main_menu.command 'Validate Syntax'
