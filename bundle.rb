@@ -24,16 +24,8 @@ END
   bundle.folding['text.xml.xsl'] = start_folding, end_folding
   
   # File types
-  bundle.register_file_type('*.xml', 'text.xml')
-  bundle.register_file_type('*.tld', 'text.xml')
-  bundle.register_file_type('*.jsp', 'text.xml')
-  bundle.register_file_type('*.pt', 'text.xml')
-  bundle.register_file_type('*.cpt', 'text.xml')
-  bundle.register_file_type('*.dtml', 'text.xml')
-  bundle.register_file_type('*.rss', 'text.xml')
-  bundle.register_file_type('*.opml', 'text.xml')
-  bundle.register_file_type('*.xsl', 'text.xml.xsl')
-  bundle.register_file_type('*.xslt', 'text.xml.xsl')
+  bundle.file_types['text.xml'] = '*.xml', '*.tld', '*.jsp', '*.pt', '*.cpt', '*.dtml', '*.rss', '*.opml'
+  bundle.file_types['text.xml.xsl'] = '*.xsl', '*.xslt'
   
   bundle.menu 'XML' do |main_menu|
     main_menu.command 'Validate Syntax'
