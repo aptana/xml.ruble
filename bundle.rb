@@ -2,10 +2,10 @@ require 'java'
 require 'ruble'
 
 bundle 'XML' do |bundle|
-  bundle.author = 'Allan Odgaard'
-  bundle.contact_email_rot_13 = 'gz-ohaqyrf@znpebzngrf.pbz'
+  bundle.author = 'Christopher Williams'
+  bundle.copyright = "© Copyright 2010 Aptana Inc. Distributed under the MIT license."
   bundle.description =  <<END
-Support for the <a href="http://www.w3.org/XML/">eXtensible Markup Language</a>.
+A port of the TextMate bundle that provides support for the <a href="http://www.w3.org/XML/">eXtensible Markup Language</a>.
 END
   bundle.repository = "git://github.com/aptana/xml.ruble.git"
 
