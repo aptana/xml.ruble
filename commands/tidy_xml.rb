@@ -5,6 +5,7 @@ command 'Tidy' do |cmd|
   cmd.scope = 'text.xml'
   cmd.output = :replace_selection
   cmd.input = :selection, :document
+  cmd.invoke.windows = ""
   # FIXME The exit_show_tooltip won't work...
   cmd.invoke =<<-EOF
 if [[ "$TM_SOFT_TABS" = "YES" ]];
