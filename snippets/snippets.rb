@@ -1,3 +1,5 @@
+require 'ruble'
+
 snippet 'CDATA' do |s|
   s.trigger = 'cdata'
   s.scope = 'text.xml'
