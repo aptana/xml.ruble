@@ -39,20 +39,8 @@ END
   end
 end
 
-# Extend Ruble::Editor to add special ENV vars
-module Ruble
-  class Editor
-    unless method_defined?(:to_env_pre_xml_bundle)
-      alias :to_env_pre_xml_bundle :to_env
-      def to_env
-        env_hash = to_env_pre_xml_bundle
-        scopes = current_scope.split(' ')
-        if !scopes.select {|scope| scope.start_with? "text.xml" }.empty?
-          env_hash['TM_COMMENT_START'] = "<!-- "
-          env_hash['TM_COMMENT_END'] = " -->"
-        end
-        env_hash
-      end
-    end
-  end
+# add special ENV vars
+env "text.xml" do |e|
+  e['TM_COMMENT_START'] = "<!-- "
+  e['TM_COMMENT_END'] = " -->"
 end
