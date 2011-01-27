@@ -1,62 +1,11 @@
 !!com.aptana.scripting.model.BundleElement
-author: Christopher Williams
+author: null
 children:
-- !!com.aptana.scripting.model.MenuElement
-  children:
-  - children: &id001 []
-    commandName: Validate Syntax
-    customProperties: null
-    displayName: Validate Syntax
-    path: bundle.rb
-    scope: null
-  - children: *id001
-    commandName: Tidy
-    customProperties: null
-    displayName: Tidy
-    path: bundle.rb
-    scope: null
-  - children: *id001
-    commandName: Create XSL Generator for Selection
-    customProperties: null
-    displayName: Create XSL Generator for Selection
-    path: bundle.rb
-    scope: null
-  - children: *id001
-    commandName: '-'
-    customProperties: null
-    displayName: '-'
-    path: bundle.rb
-    scope: null
-  - children: *id001
-    commandName: Long Tag
-    customProperties: null
-    displayName: Long Tag
-    path: bundle.rb
-    scope: null
-  - children: *id001
-    commandName: Long Attribute Tag
-    customProperties: null
-    displayName: Long Attribute Tag
-    path: bundle.rb
-    scope: null
-  - children: *id001
-    commandName: Short Tag
-    customProperties: null
-    displayName: Short Tag
-    path: bundle.rb
-    scope: null
-  commandName: XML
-  customProperties: null
-  displayName: XML
-  path: bundle.rb
-  scope: null
-- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: snippet-ffeaee98-3af3-49a4-a971-931583d8d983,
-  path: bundle.rb, scope: text.xml}
-- !!com.aptana.scripting.model.CommandElement {async: false, customProperties: null,
-  displayName: Create XSL Generator for Selection, inputPath: null, keyBindingMap: null,
-  outputPath: null, outputType: replace_selection, path: commands/create_xsl_generator_for_selection.rb,
-  runType: current_thread, scope: text.xml, workingDirectoryType: UNDEFINED}
-- !!com.aptana.scripting.model.CommandElement
+- !command {async: false, customProperties: null, displayName: Create XSL Generator for Selection,
+  inputPath: null, keyBindingMap: null, outputPath: null, outputType: replace_selection,
+  path: commands/create_xsl_generator_for_selection.rb, runType: current_thread, scope: text.xml,
+  workingDirectoryType: UNDEFINED}
+- !command
   async: false
   customProperties: null
   displayName: Tidy
@@ -69,7 +18,7 @@ children:
   runType: current_thread
   scope: text.xml
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
+- !command
   async: false
   customProperties: null
   displayName: Validate Syntax
@@ -162,17 +111,14 @@ children:
   displayName: XSLT Template, filetype: '*.xsl', inputPath: null, keyBindingMap: null,
   outputPath: null, outputType: discard, path: templates/templates.rb, runType: current_thread,
   scope: null, workingDirectoryType: UNDEFINED}
-copyright: © Copyright 2010 Aptana Inc. Distributed under the MIT license.
+copyright: null
 customProperties: null
 decreaseIndentMarkers: {!scope 'text.xml': !regexp '(?-mix:^\s*(<\/[^>]+>|-->|--%>))'}
-description: 'A port of the TextMate bundle that provides support for the <a href="http://www.w3.org/XML/">eXtensible
-  Markup Language</a>.
-
-  '
+description: null
 displayName: XML
-fileTypeRegistry: {'*.xsl': text.xml.xsl, '*.jsp': text.xml, '*.dtml': text.xml, '*.rss': text.xml,
-  '*.pt': text.xml, '*.tld': text.xml, '*.xml': text.xml, '*.opml': text.xml, '*.xslt': text.xml.xsl,
-  '*.cpt': text.xml}
+fileTypeRegistry: {'*.xsl': text.xml.xsl, '*.rss': text.xml, '*.dtml': text.xml, '*.jsp': text.xml,
+  '*.pt': text.xml, '*.tld': text.xml, '*.xslt': text.xml.xsl, '*.opml': text.xml,
+  '*.xml': text.xml, '*.cpt': text.xml}
 fileTypes: ['*.xml', '*.tld', '*.jsp', '*.pt', '*.cpt', '*.dtml', '*.rss', '*.opml',
   '*.xsl', '*.xslt']
 foldingStartMarkers: {!scope 'text.xml.xsl': !regexp '(?-mix:^\s*(<[^!?%\/](?!.+?(\/>|<\/.+?>))|<[!%]--(?!.+?--%?>)|<%[!]?(?!.+?%>)))',

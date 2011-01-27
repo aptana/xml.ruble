@@ -14,15 +14,16 @@ END
   increase_indent_pattern = /^\s*<(([^!\/?]|%)(?!.+?([\/%]>|<\/.+?>))|[%!]--\s*$)/
   decrease_indent_pattern = /^\s*(<\/[^>]+>|-->|--%>)/
   bundle.indent["text.xml"] = increase_indent_pattern, decrease_indent_pattern
-  
+
+  # Set up folding. Folding is now done in Java code for this language  
   # XML Folding
-  folding_start_marker = /^\s*(<[^!?%\/](?!.+?(\/>|<\/.+?>))|<[!%]--(?!.+?--%?>)|<%[!]?(?!.+?%>))/
-  folding_stop_marker = /^\s*(<\/[^>]+>|[\/%]>|-->)\s*$/
-  bundle.folding["text.xml"] = folding_start_marker, folding_stop_marker
+  # folding_start_marker = /^\s*(<[^!?%\/](?!.+?(\/>|<\/.+?>))|<[!%]--(?!.+?--%?>)|<%[!]?(?!.+?%>))/
+  # folding_stop_marker = /^\s*(<\/[^>]+>|[\/%]>|-->)\s*$/
+  #bundle.folding["text.xml"] = folding_start_marker, folding_stop_marker
   # XSL Folding
-  start_folding = /^\s*(<[^!?%\/](?!.+?(\/>|<\/.+?>))|<[!%]--(?!.+?--%?>)|<%[!]?(?!.+?%>))/
-  end_folding = /^\s*(<\/[^>]+>|[\/%]>|-->)\s*$/
-  bundle.folding['text.xml.xsl'] = start_folding, end_folding
+  # start_folding = /^\s*(<[^!?%\/](?!.+?(\/>|<\/.+?>))|<[!%]--(?!.+?--%?>)|<%[!]?(?!.+?%>))/
+  # end_folding = /^\s*(<\/[^>]+>|[\/%]>|-->)\s*$/
+  # bundle.folding['text.xml.xsl'] = start_folding, end_folding
   
   # File types
   bundle.file_types['text.xml'] = '*.xml', '*.tld', '*.jsp', '*.pt', '*.cpt', '*.dtml', '*.rss', '*.opml'
