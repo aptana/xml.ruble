@@ -50,16 +50,26 @@ children:
   displayName: XML
   path: bundle.rb
   scope: null
-- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: snippet-1ce588e8-c858-464b-8387-7862246afbba,
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-eddc3084-695a-44b9-b433-fe41e0d8d1d0,
   path: bundle.rb, scope: text.xml}
-- !!com.aptana.scripting.model.CommandElement {async: false, customProperties: null,
-  displayName: Create XSL Generator for Selection, inputPath: null, keyBindingMap: null,
-  outputPath: null, outputType: replace_selection, path: commands/create_xsl_generator_for_selection.rb,
-  runType: current_thread, scope: text.xml, workingDirectoryType: UNDEFINED}
+- !!com.aptana.scripting.model.CommandElement
+  async: false
+  customProperties: null
+  displayName: Create XSL Generator for Selection
+  input: [selection, document]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: replace_selection
+  path: commands/create_xsl_generator_for_selection.rb
+  runType: current_thread
+  scope: text.xml
+  workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Tidy
+  input: [selection, document]
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+M2+H]
@@ -73,6 +83,7 @@ children:
   async: false
   customProperties: null
   displayName: Validate Syntax
+  input: [document]
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+M2+V]
@@ -88,6 +99,7 @@ children:
     prefix_values: [cdata]
   displayName: CDATA
   expansion: <![CDATA[$0]]>
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -104,6 +116,7 @@ children:
   expansion: '<${1:name} ${2:attr="value"}>$0
 
     </${1:name}>'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -118,6 +131,7 @@ children:
     prefix_values: [<]
   displayName: Long Tag
   expansion: <${1:name}>$0</${1:name}>
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -132,6 +146,7 @@ children:
     prefix_values: ['>']
   displayName: Short Tag
   expansion: <${1:name} />
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -146,6 +161,7 @@ children:
     prefix_values: [xml]
   displayName: XML Processing Instruction
   expansion: <?xml version="1.0" encoding="UTF-8"?>
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -154,14 +170,34 @@ children:
   runType: current_thread
   scope: text.xml
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.TemplateElement {async: false, customProperties: null,
-  displayName: XML Template, filetype: '*.xml', inputPath: null, keyBindingMap: null,
-  outputPath: null, outputType: discard, path: templates/templates.rb, runType: current_thread,
-  scope: null, workingDirectoryType: UNDEFINED}
-- !!com.aptana.scripting.model.TemplateElement {async: false, customProperties: null,
-  displayName: XSLT Template, filetype: '*.xsl', inputPath: null, keyBindingMap: null,
-  outputPath: null, outputType: discard, path: templates/templates.rb, runType: current_thread,
-  scope: null, workingDirectoryType: UNDEFINED}
+- !!com.aptana.scripting.model.TemplateElement
+  async: false
+  customProperties: null
+  displayName: XML Template
+  filetype: '*.xml'
+  input: []
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: discard
+  path: templates/templates.rb
+  runType: current_thread
+  scope: null
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.TemplateElement
+  async: false
+  customProperties: null
+  displayName: XSLT Template
+  filetype: '*.xsl'
+  input: []
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: discard
+  path: templates/templates.rb
+  runType: current_thread
+  scope: null
+  workingDirectoryType: UNDEFINED
 copyright: Copyright 2010 Aptana Inc. Distributed under the MIT license.
 customProperties: null
 decreaseIndentMarkers: {!scope 'text.xml': !regexp '(?-mix:^\s*(<\/[^>]+>|-->|--%>))'}
