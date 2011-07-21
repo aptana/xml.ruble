@@ -50,7 +50,7 @@ children:
   displayName: XML
   path: bundle.rb
   scope: null
-- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-f2957644-dd3c-4cba-a8a6-116704675afc,
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-eddc3084-695a-44b9-b433-fe41e0d8d1d0,
   path: bundle.rb, scope: text.xml}
 - !!com.aptana.scripting.model.CommandElement
   async: false
