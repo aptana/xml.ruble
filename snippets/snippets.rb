@@ -23,7 +23,7 @@ with_defaults :scope => 'text.xml' do
   end
 
   snippet 'XML Processing Instruction' do |s|
-    s.trigger = 'xml'
+    s.trigger = '<?xml'
     s.expansion = '<?xml version="1.0" encoding="UTF-8"?>'
   end
 end
