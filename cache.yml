@@ -50,7 +50,7 @@ children:
   displayName: XML
   path: bundle.rb
   scope: null
-- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-870cb463-ac5f-44c0-85e8-0edd850b69b0,
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-7ae10adc-e7e9-4baa-ba77-f795db957ff4,
   path: bundle.rb, scope: text.xml}
 - !!com.aptana.scripting.model.CommandElement
   async: false
@@ -158,7 +158,7 @@ children:
 - !!com.aptana.scripting.model.SnippetElement
   async: false
   customProperties:
-    prefix_values: [xml]
+    prefix_values: ['<?xml']
   displayName: XML Processing Instruction
   expansion: <?xml version="1.0" encoding="UTF-8"?>
   input: [none]
