@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Tidy' do |cmd|
+command t(:tidy) do |cmd|
   cmd.key_binding = 'CONTROL+M2+H'
   cmd.scope = 'text.xml'
   cmd.output = :replace_selection

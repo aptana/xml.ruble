@@ -6,23 +6,23 @@ with_defaults :scope => 'text.xml' do
     s.expansion = '<![CDATA[$0]]>'
   end
   
-  snippet 'Long Attribute Tag' do |s|
+  snippet t(:long_attribute_tag) do |s|
     s.trigger = '<a'
     s.expansion = '<${1:name} ${2:attr="value"}>$0
 </${1:name}>'
   end
   
-  snippet 'Long Tag' do |s|
+  snippet t(:long_tag) do |s|
     s.trigger = '<'
     s.expansion = '<${1:name}>$0</${1:name}>'
   end
   
-  snippet 'Short Tag' do |s|
+  snippet t(:short_tag) do |s|
     s.trigger = '>'
     s.expansion = '<${1:name} />'
   end
 
-  snippet 'XML Processing Instruction' do |s|
+  snippet t(:xml_processing_instruction) do |s|
     s.trigger = '<?xml'
     s.expansion = '<?xml version="1.0" encoding="UTF-8"?>'
   end

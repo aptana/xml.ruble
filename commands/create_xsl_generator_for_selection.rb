@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Create XSL Generator for Selection' do |cmd|
+command t(:create_xsl_generator) do |cmd|
   cmd.scope = 'text.xml'
   cmd.output = :replace_selection
   cmd.input = :selection, :document

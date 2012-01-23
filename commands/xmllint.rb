@@ -1,6 +1,6 @@
 require 'ruble'
 # FIXME This won't work on windows
-command 'Validate Syntax' do |cmd|
+command t(:validate_syntax) do |cmd|
   cmd.key_binding = 'CONTROL+M2+V'
   cmd.scope = 'text.xml'
   cmd.output = :show_as_html
