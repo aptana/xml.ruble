@@ -1,0 +1,10 @@
+en:
+  bundle_name: 'XML'
+  validate_syntax: 'Validate Syntax'
+  tidy: 'Tidy'
+  create_xsl_generator: 'Create XSL Generator for Selection'
+  long_tag: 'Long Tag'
+  long_attribute_tag: 'Long Attribute Tag'
+  short_tag: 'Short Tag'
+  xml_processing_instruction: 'XML Processing Instruction'
+  
