@@ -6,15 +6,27 @@ with_defaults :scope => 'text.xml' do
     s.expansion = '<![CDATA[$0]]>'
   end
   
-  snippet t(:long_attribute_tag) do |s|
-    s.trigger = '<a'
-    s.expansion = '<${1:name} ${2:attr="value"}>$0
-</${1:name}>'
+  command t(:long_attribute_tag) do |cmd|
+    cmd.output = :insert_as_snippet
+    cmd.trigger = '<a'
+    cmd.invoke do |context|
+      expansion = '<${1:name} ${2:attr="value"}>$0
+</${1:name}'
+      next_char = context.editor.document.get(context.editor.caret_offset, 1)
+      expansion += ">" unless next_char == ">"
+      expansion
+    end
   end
   
-  snippet t(:long_tag) do |s|
-    s.trigger = '<'
-    s.expansion = '<${1:name}>$0</${1:name}>'
+  command t(:long_tag) do |cmd|
+    cmd.trigger = '<'
+    cmd.output = :insert_as_snippet
+    cmd.invoke do |context|
+      expansion = '<${1:name}>$0</${1:name}'
+      next_char = context.editor.document.get(context.editor.caret_offset, 1)
+      expansion += ">" unless next_char == ">"
+      expansion
+    end
   end
   
   snippet t(:short_tag) do |s|
@@ -22,9 +34,15 @@ with_defaults :scope => 'text.xml' do
     s.expansion = '<${1:name} />'
   end
 
-  snippet t(:xml_processing_instruction) do |s|
-    s.trigger = '<?xml'
-    s.expansion = '<?xml version="1.0" encoding="UTF-8"?>'
+  command t(:xml_processing_instruction) do |cmd|
+    cmd.trigger = '<?xml'
+    cmd.output = :insert_as_snippet
+    cmd.invoke do |context|
+      expansion = '<?xml version="1.0" encoding="UTF-8"?'
+      next_char = context.editor.document.get(context.editor.caret_offset, 1)
+      expansion += ">" unless next_char == ">"
+      expansion
+    end
   end
 end
   
